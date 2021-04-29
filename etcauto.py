@@ -5,7 +5,7 @@ import requests
 
 access = "mzI0dPuXHN7Z6ixKrcRoAotBJUjwwWPFuvoho4Yi"
 secret = "lTCSS8efgEFCZVGupZalgWwfJ8qv3V8Nf5UB2Lrr"
-myToken = "xoxb-2037054847824-2013513566995-pxjkNFIepMOGU8B2VwUIu74H"
+myToken = "xoxb-2037054847824-2013513566995-HgW3K8FycJHzXKFhy9QbEwrH"
 
 def post_message(token, channel, text):
     """슬랙 메시지 전송"""
@@ -71,7 +71,7 @@ while True:
             etc = get_balance("ETC")
             if etc > 0.04:
                 sell_result = upbit.sell_market_order("KRW-ETC", btc*0.9995)
-                post_message(myToken,"#bit", "BTT buy : " +str(sell_result))
+                post_message(myToken,"#bit", "ETC buy : " +str(sell_result))
         time.sleep(1)
     except Exception as e:
         print(e)
